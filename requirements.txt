@@ -1,0 +1,8 @@
+google.generativeai
+python-dotenv
+requests
+PyPDF2
+SpeechRecognition
+docx
+flask
+python-docx 

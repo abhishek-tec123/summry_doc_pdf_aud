@@ -1,0 +1,34 @@
+curl -X POST http://localhost:5000/upload \
+     -F "file=@/Users/macbook/Desktop/project/python.pdf"
+
+
+curl -s https://www.bu.edu/lernet/artemis/years/2011/slides/python.pdf | curl -X POST http://localhost:5000/upload \
+     -F "file=@-;filename=python.pdf"
+
+
+{
+  "url": "https://www.bu.edu/lernet/artemis/years/2011/slides/python.pdf"
+}
+
+
+
+# import requests
+# from io import BytesIO
+
+# response = requests.get('https://www.bu.edu/lernet/artemis/years/2011/slides/python.pdf')
+# pdf_stream = BytesIO(response.content)
+# print(pdf_stream.read())
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////
+
+# import requests
+# from io import StringIO
+
+# # Fetch text data from a URL
+# response = requests.get('https://www.bu.edu/lernet/artemis/years/2011/slides/python.pdf')
+
+# # Create a StringIO object from the text content
+# text_buffer = StringIO(response.text)
+
+# # Example: Read the first 100 characters
+# print(text_buffer.read())
