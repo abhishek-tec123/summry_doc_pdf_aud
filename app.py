@@ -502,6 +502,11 @@ def upload_video():
     except Exception as e:
         logging.error(f"An error occurred during transcript extraction: {e}")
         return jsonify({'error': str(e)}), 500
+    
+@app.route('/', methods=['GET'])
+def home():
+    return "Welcome to the AI-Powered Document Summarization API!"
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
